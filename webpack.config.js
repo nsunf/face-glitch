@@ -10,7 +10,7 @@ export default {
     index: './src/scripts/index.ts'
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'docs'),
     filename: '[name].bundle.js'
   },
   module: {
