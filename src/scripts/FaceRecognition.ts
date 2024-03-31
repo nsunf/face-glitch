@@ -44,7 +44,8 @@ export default class FaceRecognition {
     let iSize = 50;
     let iRad = this.faceIconRadius;
     let iCX = cx;
-    let iCY = cy - size/1.25 + iSize/2;
+    // let iCY = cy - size/1.25 + iSize/2;
+    let iCY = cy - size/1.25;
 
     ctx.globalCompositeOperation = 'xor';
 
