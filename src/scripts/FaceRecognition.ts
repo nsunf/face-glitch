@@ -94,7 +94,7 @@ export default class FaceRecognition {
 
     let length = size / 3.75;
     let lineWidth = size / 37.5;
-    let radius = 50;
+    let radius = 25;
 
     ctx.lineWidth = lineWidth;
 
@@ -144,7 +144,6 @@ export default class FaceRecognition {
   }
 
   fadeOut(ctx: CanvasRenderingContext2D): boolean {
-    console.log('hhh')
     this.alpha = Math.max(0, this.alpha - 0.1);
     this.keypointsAlpha = Math.max(0, this.keypointsAlpha - 0.1);
     this.draw(ctx, 'lawngreen');

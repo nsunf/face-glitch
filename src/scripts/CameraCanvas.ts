@@ -19,8 +19,8 @@ class CameraCanvas extends Canvas {
 
     // this.element.style.filter = 'blur(10px)';
     // this.element.style.transition = '7s';
-    this.ctx.translate(innerWidth, 0);
-    this.ctx.scale(-1, 1);
+    // this.ctx.translate(innerWidth, 0);
+    // this.ctx.scale(-1, 1);
   }
 
   async setCamera() {
@@ -36,7 +36,10 @@ class CameraCanvas extends Canvas {
   playVideo() {
     let video = this.camera.videoEl;
     if (!video) throw new Error('CameraCanvas.playVideo() error : video is undefined');
-    this.ctx.drawImage(video, (this.width - this.height*1.777)/2, 0, this.height*1.777, this.height);
+    // this.ctx.drawImage(video, (this.width - this.height*1.777)/2, 0, this.height*1.777, this.height);
+    // this.ctx.drawImage(video, (this.width - this.height/1.333)/2, 0, this.height/1.333, this.height);
+    const length = Math.min(this.width, this.height);
+    this.ctx.drawImage(video, (this.width - length)/2, (this.height - length)/2, length, length);
   }
   drawImage(imgSrc: string) {
     let img = new Image();

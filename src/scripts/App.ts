@@ -52,7 +52,7 @@ class App {
     
     this.setFaceManager(faces);
 
-    console.log('인식된 얼굴 개수 : ' + this.faceManagers.filter(manager => manager.face).length)
+    // console.log('인식된 얼굴 개수 : ' + this.faceManagers.filter(manager => manager.face).length)
 
     // this.cameraCanvas.toggleBlur(faces.length === 0);
     this.toggleBlind(faces.length === 0);
@@ -68,7 +68,7 @@ class App {
     const text2Div: HTMLDivElement|null = document.querySelector('.text--2');
     if (text1Div && text2Div && this.blindEl) {
       let on = this.faceManagers.filter(manager => manager.face).length > 0;
-      text1Div.style.transition = on ? '2s 3500ms' : '2s'; 
+      text1Div.style.transition = on ? 'opacity 2s 3500ms' : 'opacity 2s'; 
       text1Div.style.opacity = on ? '0' : '1'; 
       text2Div.style.animation = on ? '6s linear 5500ms textFadeIn': 'unset';
       this.blindEl.style.transition = on ? '10s 2s' : '10s';
